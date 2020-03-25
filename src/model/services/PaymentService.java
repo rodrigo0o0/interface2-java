@@ -1,10 +1,6 @@
 package model.services;
 
-import java.util.List;
-
-import model.entities.Contract;
-import model.entities.Installment;
-
 public interface PaymentService {
-	List<Installment> processInstallment(Contract contract);
+	double basicQuota (double amount, int value);
+	double quota(double amount);
 }

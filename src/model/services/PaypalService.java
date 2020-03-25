@@ -1,16 +1,15 @@
 package model.services;
 
-import java.util.List;
-
-import model.entities.Contract;
-import model.entities.Installment;
-
 public class PaypalService implements PaymentService {
 
 	@Override
-	public List<Installment> processInstallment(Contract contract) {
-		// TODO Auto-generated method stub
-		return null;
+	public double basicQuota (double amount, int value) {
+		return amount * ((double)value /100);
+	}
+
+	@Override
+	public double quota(double amount) {
+		return amount * 0.02;
 	}
 
 }
